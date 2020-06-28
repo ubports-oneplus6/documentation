@@ -14,3 +14,5 @@ sudo -s
 mount -o remount,rw /
 cat /var/lib/lxc/android/rootfs/ueventd*.rc /vendor/ueventd*.rc | grep ^/dev | sed -e 's/^\/dev\///' | awk '{printf "ACTION==\"add\", KERNEL==\"%s\", OWNER=\"%s\", GROUP=\"%s\", MODE=\"%s\"\n",$1,$3,$4,$2}' | sed -e 's/\r//' >/etc/udev/rules.d/70-ubport.rules
 ```
+
+(source: https://github.com/ubports/porting-notes/wiki/Halium-9#generating-udev-rules)
