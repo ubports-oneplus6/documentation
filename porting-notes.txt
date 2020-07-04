@@ -1,0 +1,132 @@
+This file contain notes or copied messages from other chats, like telegram, discord or irc.
+You should follow instructions given in readme.txt, and check what's written here only in
+case of problems
+
+=============
+
+@cyjanek - 18/06/2020
+    It shows time correctly, but in different timezone
+    UTC+0
+    And clicking on things in Time zone settings doesn't do anything...
+    Changing time to manual is not working too :/
+@Deathmist - 18/06/2020
+    @cyjanek sudo dpkg-reconfigure tzdata
+
+@erfanoabdi - 19/06/2020
+ > for fixing black camera bug on gsi v8 run rm .cache/gstreamer-1.0/registry.*
+
+@erfanoabdi - 18/06/2020
+    https://build.lolinet.com/file/halium/fajita/
+
+@caleb - 17/06/2020
+    to make fastboot work reliably, pick "bootloader" in the fastboot boot menu on your phone, hit the power button and then run the fastboot command while it's rebooting, you should see "waiting for device" on your terminal and then it will boot
+
+@caleb - 15/06/2020
+    For testing enchilada/fajita fixes
+    Flash 9 stock
+    Format data
+    Flash gsi v7
+    Flash my kernel
+    Flash halium-ramdisk
+    From twrp mount vendor and remove /vendor/etc/fstab_nodata.qcom and /vendor/lib/hw/lights.sdm845.so
+    Reboot
+    https://build.lolinet.com/file/halium/GSI/tools/halium-ramdisk.zip
+    https://build.lolinet.com/file/halium/enchilada/enchilada_Kernel_4.9-20200616-0429.zip
+
+@Deathmist - 04/17/2020 # Warning: This is for oneplus5, not 6
+    I've indexed other perhaps useful stuff like USB networking in https://github.com/ubports-oneplus5/documentation#helpful-tips-for-ubuntu-touch (Anbox won't work without kernel changes) ;)
+
+=== Fastboot problems
+
+If you are getting something similar to: # (Note that I've done it the way which '@caleb - 17/06/2020' have said)
+    cyjan@ubudubu:/mnt/oldpc/Porting$ sudo fastboot boot twrp-3.3.1-32-fajita-Pie-mauronofrio.img 
+    [sudo] hasło użytkownika cyjan: 
+    < waiting for any device >
+    downloading 'boot.img'...
+    OKAY [  0.842s]
+    booting...
+    FAILED (remote: Failed to load/authenticate boot image: Load Error)
+    finished. total time: 0.860s
+
+try switching slots by using 'fastboot --set-active=a' reboot. If it worked, go to twrp (don't change slots or wipe storage) and dirty flash flash stock 9, then change slot and flash stock 9 again.
+If it didn't work:
+Grab OnePlus6TOxygen_fastboot_34_OTA_android_9_Pie.zip, unzip it, then unzip images.zip
+and open visible .bat file (flash all or something similar in name).
+
+You can copy all fastboot flash * commands and execute them in your terminal.
+NOTE: it uses \r\n instead of \n because script was written on windows, so executing in by 'bash flashall.bat' will cause errors.
+
+This has worked for me, I was able to boot into twrp and continue porting, if you still have problems try official unbricker tool, and if it still doesn't work you probably have broken flash card (I've read about it on some forum), and try to return it on warranty.
+
+=== Stuck at 'The boot loader is unlocked...' screen
+*You should be able to access ssh
+First of all, go to twrp, mount vendor and in file manager check if /vendor contain 'lost+found', if yes then you have missed point 1.4 visible in readme.txt
+
+=== Twrp 'E:Error getting bootctrl module'
+Simply reboot ;)
+
+=== Messaging app is not working
+*Yup.
+I'm able to receive messages, but sending them doesn't work.
+
+=== Camera app is working, but taking photo crashes the app.
+@cyjanek - 20/06/2020
+    + camera app is working, but taking photo crashes the app(edited)
+@caleb - 20/06/2020
+    @cyjanek rip :(
+@cyjanek - 20/06/2020
+    Well I have fix for that xd
+@caleb - 20/06/2020
+    oh yay
+@cyjanek - 20/06/2020
+    Just switch to front camera, take photo and go back to back camera and it worked
+    (...)
+    I think that there is a problem with photos directory not being created
+(...)
+@caleb - 20/06/2020
+    weird that it only affects rear camera
+@cyjanek - 20/06/2020
+    Yeah,
+    after taking photo by front camera, rear started to work
+    Hm, and it stopped working again
+    *** Error in `./camera-app': corrupted size vs. prev_size: 0x01345858 ***
+    Oh I get it now
+    Maybe the flash is broken
+    Switching it to on auto and then to off, allowed me to take photos
+
+
+=== How to update ubuntu touch gsi
+@roxitoToday - 23/06/2020
+    How to update ubuntu touch? op6t user
+@devin - 23/06/2020
+    If a new gsi comes out boot twrp, flash the gsi zip and flash the halium boot image after. Ubuntu touch does not support apt as a way of updating so you pretty much have to wait for a new gsi image with an updated rootfs.
+    If it ever becomes officially supported by ubports I’m sure delta updates through the settings app would work like any other official device but don’t quote me on that
+
+==== Interacting with the RootFS from TWRP (https://github.com/ubports-oneplus5/documentation)
+    mount /data/rootfs.img /mnt
+    chroot /mnt /bin/bash
+    . /etc/environment
+    <execute what you need to>
+    exit
+    umount /mnt && sync
+
+==== Expand the GSI RootFS size
+    This is an example on how to expand the rootfs image to 16 GiB. Begin by booting your device back to TWRP, connect the USB cable and run the command below from your host:
+    adb shell "resize2fs /data/rootfs.img 16G"
+
+==== RootFS as read-write
+    sudo mount / -o remount,rw
+
+==== Gain root user access
+    sudo -s
+
+==== SSH from host via USB
+    *Maybe edit your host's /etc/hosts?
+    ssh phablet@10.15.19.82
+
+==== to revert the patches and all other local changes run repo sync -l
+==== hybris-patches/apply-patches.sh --mb
+
+==== Fix not working web apps
+    flash apparmor_disabler.zip from twrp
+    edit: DON'T this breaks a lot of things, like for example media players

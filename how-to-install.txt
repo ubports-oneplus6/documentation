@@ -1,0 +1,54 @@
+Below you can find something similar to:
+
+p.s. You can download only one file at a time, to avoid overload. While downloading you may get 503 error.
+
+├─ dtbo-*.*.*.img
+├─ GSI
+│ └─ ubports_GSI_installer_v*.zip
+├─ halium-boot-*.*.*.img
+├─ halium-ramdisk-*.*.*.zip
+└─ porting-notes.txt
+
+In addition to that, you will need twrp for Pie, and stock 9 image. Grab them from the .. directory.
+
+Ubuntu touch installation instructions:
+
+1. Flash stock 9
+    *You should have file named 'OnePlus6TOxygen_twrp_34_OTA_android_9_Pie.zip' in your working directory.
+    1.1 Boot to twrp by using 'fastboot boot twrp*Pie*.img' # Assuming that you have it in your current directory
+    1.2 Move .zip file to sdcard by using 'adb push OnePlus6TOxygen_twrp_34_OTA_android_9_Pie.zip /sdcard'
+    1.3 In twrp go to install and flash OnePlus6TOxygen_twrp_34_OTA_android_9_Pie.zip.
+    1.4 go to reboot and change slot then repeat point 1.3
+2. Format data
+    *Optional step: check if stock 9 works by doing reboot -> system
+    2.1 Boot to twrp go to wipe and click Format data, if asked type 'yes'.
+3. Flash gsi v8
+    *While I've used gsi v8, and then updated to v9 you can try to flash v9 directly. It fixes several things
+    3.1 Boot to twrp
+    3.2 move ubports_GSI_installer_v*.zip file to /sdcard by using
+        'adb push ubports_GSI_installer_v*.zip /sdcard'
+    3.3 Install it from 'install' menu in twrp
+4. Flash my kernel
+    *Before leaving twrp, take note of current slot, and do 'fastboot --set-active=?' when booted into twrp
+    4.1 boot to fastboot
+    4.2 type 'fastboot flash boot halium-boot*.img'
+5. Flash halium-ramdisk
+    5.1 Boot to twrp
+    5.2 Move halium-ramdisk*.zip by using
+        'adb push halium-ramdisk*.zip /sdcard'
+    5.3 Go to install and install zip
+6. Fix vendor
+    *Do this *only* on gsi version lower than 9 # Or if you can't change brightness of screen
+    6.1 Boot to twrp
+    6.2 Go to mount and mount vendor
+    6.3 Go to advabced -> file manager
+    6.4 remove files:
+        /vendor/etc/fstab_nodata.qcom
+        /vendor/lib/hw/lights.sdm845.so
+7. Flash dtbo partition
+    7.1 Boot to fastboot
+    7.2 Type following command:
+        'fastboot flash dtbo dtbo*.img'
+8. Reboot :)
+
+You should have working ubuntu touch now. In case of problems check porting-notes.txt
