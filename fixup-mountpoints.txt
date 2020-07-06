@@ -1,0 +1,26 @@
+Results of this command:
+for i in *; do echo "s `pwd`/$i `readlink -f $i | sed -En 's/\/dev\/block\///p'`"; done | grep -E "system|userdata|modem|dsp|persist|bluetooth|boot_|/boot "
+Executed in:
+/dev/block/bootdevice/by-name 
+From TWRP with working Halium-9 and GSI on slot B
+
+s /dev/block/bootdevice/by-name/bluetooth sde33
+s /dev/block/bootdevice/by-name/bluetooth_a sde5
+s /dev/block/bootdevice/by-name/bluetooth_b sde33
+s /dev/block/bootdevice/by-name/boot sde39
+s /dev/block/bootdevice/by-name/boot_a sde11
+s /dev/block/bootdevice/by-name/boot_b sde39
+s /dev/block/bootdevice/by-name/dsp sde37
+s /dev/block/bootdevice/by-name/dsp_a sde9
+s /dev/block/bootdevice/by-name/dsp_b sde37
+s /dev/block/bootdevice/by-name/modem sde32
+s /dev/block/bootdevice/by-name/modem_a sde4
+s /dev/block/bootdevice/by-name/modem_b sde32
+s /dev/block/bootdevice/by-name/modemst1 sdf2
+s /dev/block/bootdevice/by-name/modemst2 sdf3
+s /dev/block/bootdevice/by-name/persist sda2
+s /dev/block/bootdevice/by-name/system sda14
+s /dev/block/bootdevice/by-name/system_a sda13
+s /dev/block/bootdevice/by-name/system_b sda14
+s /dev/block/bootdevice/by-name/userdata sda17
+
