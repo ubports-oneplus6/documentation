@@ -1,5 +1,7 @@
-/etc/init/biometryd.conf
+sudo mount / -o rw
+sudo nano /etc/init/biometryd.conf
 
+end put these lines there:
 
 description "biometryd mediates access to biometric devices"
 

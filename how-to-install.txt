@@ -1,15 +1,6 @@
-Below you can find something similar to:
+https://oldpc.mrcyjanek.net/files/index.php?p=/Documents/Porting/fajita/ubuntu-touch/
 
-p.s. You can download only one file at a time, to avoid overload. While downloading you may get 503 error.
-
-├─ dtbo-*.*.*.img
-├─ GSI
-│ └─ ubports_GSI_installer_v*.zip
-├─ halium-boot-*.*.*.img
-├─ halium-ramdisk-*.*.*.zip
-└─ porting-notes.txt
-
-In addition to that, you will need twrp for Pie, and stock 9 image. Grab them from the .. directory.
+You can find all files in '..' directory
 
 Ubuntu touch installation instructions:
 
