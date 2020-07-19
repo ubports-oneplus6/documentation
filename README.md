@@ -4,6 +4,10 @@
 * Reboot into bootloader and run `fastboot flash boot halium-boot.img` - get halium boot from here: https://build.lolinet.com/file/halium/enchilada/ or https://build.lolinet.com/file/halium/fajita/
 * Boot twrp again and flash halium ramdisk from here: https://build.lolinet.com/file/halium/GSI/tools/halium-ramdisk.zip
 
+# Join our discord
+
+https://discord.gg/haVG9Ga There are many reasons for joining it.
+
 # Issues
 
 If you get stuck on the boot animation screen, run `ssh phablet@10.15.19.82` from your host (password: `phablet`)
