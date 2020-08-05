@@ -27,7 +27,7 @@ https://discord.gg/haVG9Ga [There are many reasons for joining it](https://imgur
 
 |         Component | Status |
 |------------------:|:-------|
-|   halium-boot.img | [![Build Status](https://oldpc.mrcyjanek.net:443/ci/job/android_kernel_oneplus_sdm845/badge/icon)](https://oldpc.mrcyjanek.net:443/ci/job/android_kernel_oneplus_sdm845/) |
+|   halium-boot.img | [![Build Status](https://oldpc.mrcyjanek.net:443/ci/job/ubports-oneplus6-android_kernel_oneplus_sdm845/badge/icon)](https://oldpc.mrcyjanek.net:443/ci/job/ubports-oneplus6-android_kernel_oneplus_sdm845/) |
 |       ubports-gsi | [ask them](https://github.com/ubports-gsi/projectmanagement) or [download target.zip](https://oldpc.mrcyjanek.net/ci/job/ubports-gsi-make-flashable-zip/)   |
 
 # How to install
