@@ -1,7 +1,7 @@
 # Notes and things
 
 Read everything, on the bottom you will find installation instructions.
-
+[Russian Instruction/Русская иструкция](https://github.com/ubports-oneplus6/documentation/blob/master/README.ru.md)
 # Join our discord
 
 https://discord.gg/haVG9Ga [There are many reasons for joining it](https://imgur.com/a/WM9ZNDc).
