@@ -1,3 +1,4 @@
+WARNING! NOW THIS INSTRUCTION NOT RELEVANT!
 https://oldpc.mrcyjanek.net/files/index.php?p=/Documents/Porting/fajita/ubuntu-touch/
 
 You can find all files in '..' directory
