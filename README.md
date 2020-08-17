@@ -30,7 +30,7 @@ https://discord.gg/haVG9Ga [There are many reasons for joining it](https://imgur
 |   halium-boot.img | [![Build Status](https://oldpc.mrcyjanek.net:443/ci/job/ubports-oneplus6-android_kernel_oneplus_sdm845/badge/icon)](https://oldpc.mrcyjanek.net:443/ci/job/ubports-oneplus6-android_kernel_oneplus_sdm845/) |
 |       ubports-gsi | [ask them](https://github.com/ubports-gsi/projectmanagement) or [download target.zip](https://oldpc.mrcyjanek.net/ci/job/ubports-gsi-make-flashable-zip/)   |
 
-# How to install
+# How to install this OS?
 
  * [Stock rom, twrp and stuff for fajita (6T)](https://oldpc.mrcyjanek.net/files/all/Documents/Porting/fajita)
  * [Stock rom for enchilada (6)](https://oldpc.mrcyjanek.net/files/all/Documents/Porting/enchilada)
@@ -45,19 +45,19 @@ https://discord.gg/haVG9Ga [There are many reasons for joining it](https://imgur
     * _Optional step: check if stock 9 works by doing reboot -> system_
     * Boot to twrp go to wipe and click `Format data`, if asked type 'yes'.
 3. Flash gsi
-    * _Download GSI from https://oldpc.mrcyjanek.net/ci/job/ubports-gsi-make-flashable-zip/_
+    * _Download GSI from https://oldpc.mrcyjanek.net/ci/job/ubports-gsi-make-flashable-zip/_ or https://build.connolly.tech/ubports/ (target.zip)
     * Boot to twrp
     * move `target.zip` file to `/sdcard` by using
-        ```adb push target.zip /sdcard```
+        ```adb push target.zip /sdcard``` or ```MTP```
     * Install it from `install` menu in twrp
 4. Flash kernel
-    * boot to fastboot
+    * reboot to fastboot
     * type `fastboot flash boot halium-boot.img`
 5. Flash `halium-ramdisk`
     * _Download it from here https://oldpc.mrcyjanek.net/files/:D/Documents/Porting/fajita/ubuntu-touch/zips/halium-ramdisk-2020.06.20.zip_
     * Boot to twrp
     * Move `halium-ramdisk*.zip` by using
-        ```adb push halium-ramdisk*.zip /sdcard```
+        ```adb push halium-ramdisk*.zip /sdcard``` or ```MTP```
     * Go to install and install zip
 6. Reboot
 1734895. Everything should be working now c:
