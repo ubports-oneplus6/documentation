@@ -1,10 +1,10 @@
 # Notes and things
 
 Прочтите все! Нижу вы найдете инструкцию по установке.
-
+[English Instruction/Английская иструкция](https://github.com/ubports-oneplus6/documentation/blob/master/README.md)
 # Присоеденяйтесь к нашему Discord-серверу
 
-https://discord.gg/haVG9Ga [У нас есть множество причин для этого!](https://imgur.com/a/WM9ZNDc).
+https://discord.gg/haVG9Ga [У нас есть множество причин для этого!](https://imgur.com/a/WM9ZNDc)
 
 # Статус порта
 
