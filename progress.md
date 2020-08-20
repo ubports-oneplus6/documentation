@@ -3,9 +3,9 @@
 |         Component | Status | Details            |
 |------------------:|:------:|--------------------|
 |          AppArmor |    Y   |                    |
-|      Boot into UI |    Y   | [Screen turns black after few seconds](https://github.com/ubports-oneplus6/documentation/issues/4) |
+|      Boot into UI |    Y   |                    |
 |            Camera |    Y   | If app crashes after taking photo try switching cameras and turning flash on, and off. |
-|    Cellular Calls |    Y   | [Calls not working on 1 sim](https://github.com/ubports-oneplus6/documentation/issues/2) |
+|       Phone Calls |    Y   |  Only works on SIM2, you will have to move your SIM card. |
 |     Cellular Data |    Y   |                    |
 |               GPS |    Y   |                    |
 |           Sensors |    Y   |                    |
@@ -13,9 +13,9 @@
 | UBPorts Installer |    N   |                    |
 |  UBPorts Recovery |    N   |                    |
 |          Vibrator |    Y   |                    |
-|             Wi-Fi |    Y   | Sometimes (not often) you get disconnected when screen is off. |
+|             Wi-Fi |    Y   | Occasionally disconnects while device is sleeping. |
 
 ### TODO
 
  - [ ] Make UBPorts Installer working
- - [ ] Fix calls
+ - [ ] Fix calls on SIM 1
