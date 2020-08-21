@@ -1,0 +1,8 @@
+1. Downgrade to OOS 9 - this is needed and ubuntu touch doesn't work with Android 10 base
+    * Download stock OOS 9 for your device from links above, you need `OnePlus6TOxygen_twrp_34_OTA_android_9_Pie.zip`.
+    * You will unfortunately need 2 different TWRP versions if your wish to dual boot, download the latest for Android 10 - [Enchilada](https://eu.dl.twrp.me/enchilada/twrp-3.4.0-3-enchilada.img.html)/[Fajita](https://dl.twrp.me/fajita/twrp-3.4.0-1-fajita.img.html) and an older version for Android 9 [Enchilada](https://eu.dl.twrp.me/enchilada/twrp-3.3.1-2-enchilada.img.html)/[Fajita](https://dl.twrp.me/fajita/twrp-3.3.1-1-fajita.img.html).
+    * Power off your device and then turn it on while holding volume up, you should now be on a screen [like this](https://gist.github.com/Jim-Bar/a74dc9f45d049340c2a8576f2bdef701#file-oneplus_6_bootloader-jpg).
+    * Now boot into TWRP recovery with the command `fastboot boot twrp-3.4.0-3-<device>.img`, once on on the main screen, you should see your phone in `adb devices` on your PC.
+    * Move OxygenOS 9 zip file to your device with `adb push OnePlus6TOxygen_twrp_34_OTA_android_9_Pie.zip /sdcard`
+    * In TWRP go to install and choose `OnePlus6TOxygen_twrp_34_OTA_android_9_Pie.zip`. Swipe to confirm flash and wait, it will take a few minutes. Note that this will install it to your other slot, it won't affect whatever Android system you're currently running.
+    * Once it's done, go to the reboot menu and pick `bootloader`, then hit reboot. You should be in the bootloader - on a black screen with `START` in green letters like before, however you're now on the other slot (the one you just installed Android 9 to).
