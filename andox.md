@@ -1,4 +1,4 @@
-CURRENTLY IN TESTING! You should except huge baterry drains, and network not working!
+# First steps
 
 sudo mount -o rw,remount /
 
@@ -14,8 +14,7 @@ sudo chmod -R o+wrx /home/phablet/anbox-data/data
 
 sudo start -q anbox-container
 
-
-------------------------------------------------
+# Second steps
 
 ln -s ~/anbox-data/data/media/0/Documents ~/Documents/android
 
@@ -25,3 +24,5 @@ ln -s ~/anbox-data/data/media/0/Music ~/Music/android
 
 ln -s ~/anbox-data/data/media/0/Movies ~/Videos/android
 
+# Warning
+* CURRENTLY IN TESTING! You should except huge baterry drains, and network not working!
