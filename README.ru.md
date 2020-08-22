@@ -64,6 +64,7 @@ OnePlus 6(T) поддерживает функцию, известную как 
     * Скопируйте установщик Ubuntu Touch на устройство через `adb push target.zip /sdcard`
     * Установите его из меню `install` в TWRP.
 3. Установите ядро
+    * Скачайте ядро (отсюда)[https://mrcyjanek.net/ci/job/ubports-oneplus6-android_kernel_oneplus_sdm845/]
     * После установки системы, идет ядро. Снова в меню перезагрузки выберите «bootloader».
     * Находясь в загрузчике, запустите `fastboot flash boot halium-boot.img`.
 4. Установите ramdisk - этот шаг будет удален в будущем обновлении.
