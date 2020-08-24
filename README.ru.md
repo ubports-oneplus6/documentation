@@ -67,12 +67,7 @@ OnePlus 6(T) поддерживает функцию, известную как 
     * Скачайте ядро [отсюда](https://mrcyjanek.net/ci/job/ubports-oneplus6-android_kernel_oneplus_sdm845/)
     * После установки системы, идет ядро. Снова в меню перезагрузки выберите «bootloader».
     * Находясь в загрузчике, запустите `fastboot flash boot halium-boot.img`.
-4. Установите ramdisk - этот шаг будет удален в будущем обновлении.
-    * Скачайте RamDisk [отсюда](https://oldpc.mrcyjanek.net/files/:D/Documents/Porting/fajita/ubuntu-touch/zips/halium-ramdisk-2020.06.20.zip)
-    * Загрузитесь обратно в TWRP с помощью `fastboot boot twrp-3.3.1-<device>.img`.
-    * `adb push halium-ramdisk-2020.06.20.zip`
-    * Зайдите в установку и выберите `halium-ramdisk-2020.06.20.zip`
-5. Выберите систему в меню перезагрузки TWRP, не устанавливайте приложение TWRP!
+4. Выберите систему в меню перезагрузки TWRP, не устанавливайте приложение TWRP!
 Наслаждайтесь своей новой системой
 1734895. Теперь все должно работать! c:
 
