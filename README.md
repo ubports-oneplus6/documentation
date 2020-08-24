@@ -67,12 +67,7 @@ You will need the lates Android tools, they can be fetched from here: https://de
     * Download kernel from [here](https://mrcyjanek.net/ci/job/ubports-oneplus6-android_kernel_oneplus_sdm845/)
     * With the system installed, next is the kernel, from the reboot menu pick `bootloader` again.
     * Whilst in the bootloader, run `fastboot flash boot halium-boot.img`.
-4. Flash the ramdisk - this step will be removed in a future update.
-    * Download ramdisk from [here](https://oldpc.mrcyjanek.net/files/:D/Documents/Porting/fajita/ubuntu-touch/zips/halium-ramdisk-2020.06.20.zip)
-    * Boot back into TWRP with `fastboot boot twrp-3.3.1-<device>.img`.
-    * `adb push halium-ramdisk-2020.06.20.zip`
-    * Go to install and pick `halium-ramdisk-2020.06.20.zip`
-5. Choose system from TWRP reboot menu, don't install the TWRP app!
+4. Choose system from TWRP reboot menu, don't install the TWRP app!
 Enjoy your new system
 1734895. Everything should be working now c:
 
