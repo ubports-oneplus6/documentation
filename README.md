@@ -35,8 +35,7 @@ https://discord.gg/haVG9Ga [There are many reasons for joining it](https://imgur
  * [Stock rom for enchilada (6)](https://oldpc.mrcyjanek.net/files/all/Documents/Porting/enchilada)
 
 # Downloads
-Download Ubuntu Touch from https://oldpc.mrcyjanek.net/ci/job/ubports-gsi-make-flashable-zip/
-or from the mirror: https://build.connolly.tech/ubports/ (target.zip)
+Download Ubuntu Touch from https://github.com/ubports-oneplus6/documentation/releases
 
 Set it going whilst reading the information and instructions below.
 
@@ -64,7 +63,7 @@ You will need the lates Android tools, they can be fetched from here: https://de
     * Copy the Ubuntu Touch installer to the device with `adb push target.zip /sdcard`
     * Install it from `install` menu in TWRP.
 3. Flash kernel
-    * Download kernel from [here](https://mrcyjanek.net/ci/job/ubports-oneplus6-android_kernel_oneplus_sdm845/)
+    * Download kernel from [here](https://github.com/ubports-oneplus6/documentation/releases)
     * With the system installed, next is the kernel, from the reboot menu pick `bootloader` again.
     * Whilst in the bootloader, run `fastboot flash boot halium-boot.img`.
 4. Choose system from TWRP reboot menu, don't install the TWRP app!
