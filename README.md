@@ -31,8 +31,8 @@ https://discord.gg/haVG9Ga [There are many reasons for joining it](https://imgur
 
 # How to install this OS?
 
- * [Stock rom, twrp and stuff for fajita (6T)](https://oldpc.mrcyjanek.net/files/all/Documents/Porting/fajita)
- * [Stock rom for enchilada (6)](https://oldpc.mrcyjanek.net/files/all/Documents/Porting/enchilada)
+ * [Stock rom, twrp and stuff for fajita (6T)](https://oldpc.mrcyjanek.net/files/:D/Documents/Porting/fajita) [stock 9](https://otafsg1.h2os.com/patch/amazone2/GLO/OnePlus6TOxygen/OnePlus6TOxygen_34.O.24_GLO_024_1909112343/OnePlus6TOxygen_34_OTA_024_all_1909112343_d5b1905.zip)
+ * [Stock rom for enchilada (6)](https://oldpc.mrcyjanek.net/files/:D/Documents/Porting/enchilada) [stock 9](https://otafsg1.h2os.com/patch/amazone2/GLO/OnePlus6Oxygen/OnePlus6Oxygen_22.O.34_GLO_034_1909112343/OnePlus6Oxygen_22_OTA_034_all_1909112343_dd26.zip)
 
 # Downloads
 Download Ubuntu Touch from https://github.com/ubports-oneplus6/documentation/releases
